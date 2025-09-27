@@ -3,7 +3,8 @@ import { TradeSetupForm } from '@/components/TradeSetupForm';
 import { TradeDashboard } from '@/components/TradeDashboard';
 import { EmotionalRules } from '@/components/EmotionalRules';
 import { Trade, TradeSetup, TradeStatus } from '@/types/trade';
-import { TrendingUp } from 'lucide-react';
+import { TrendingUp, DollarSign } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [currentTrade, setCurrentTrade] = useState<Trade | null>(null);
@@ -54,14 +55,23 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">Disciplined profit-taking for crypto traders</p>
               </div>
             </div>
-            {currentTrade && (
-              <button
-                onClick={handleNewTrade}
-                className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-smooth"
+            <div className="flex items-center gap-3">
+              <Link
+                to="/funded-account"
+                className="px-4 py-2 bg-gradient-profit text-white rounded-lg hover:bg-gradient-profit/90 transition-smooth flex items-center gap-2"
               >
-                New Trade
-              </button>
-            )}
+                <DollarSign className="h-4 w-4" />
+                Funded Account
+              </Link>
+              {currentTrade && (
+                <button
+                  onClick={handleNewTrade}
+                  className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-smooth"
+                >
+                  New Trade
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </header>
