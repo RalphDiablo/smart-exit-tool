@@ -47,6 +47,27 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Trading specific colors
+        profit: {
+          DEFAULT: "hsl(var(--profit))",
+          foreground: "hsl(var(--profit-foreground))",
+          subtle: "hsl(var(--profit-subtle))",
+        },
+        loss: {
+          DEFAULT: "hsl(var(--loss))",
+          foreground: "hsl(var(--loss-foreground))",
+          subtle: "hsl(var(--loss-subtle))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+          subtle: "hsl(var(--warning-subtle))",
+        },
+        neutral: {
+          DEFAULT: "hsl(var(--neutral))",
+          foreground: "hsl(var(--neutral-foreground))",
+          subtle: "hsl(var(--neutral-subtle))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +83,21 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-profit": "var(--gradient-profit)",
+        "gradient-loss": "var(--gradient-loss)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-primary": "var(--gradient-primary)",
+      },
+      boxShadow: {
+        "profit": "var(--shadow-profit)",
+        "loss": "var(--shadow-loss)",
+        "card": "var(--shadow-card)",
+      },
+      transitionTimingFunction: {
+        "smooth": "var(--transition-smooth)",
+        "bounce": "var(--transition-bounce)",
       },
       keyframes: {
         "accordion-down": {
